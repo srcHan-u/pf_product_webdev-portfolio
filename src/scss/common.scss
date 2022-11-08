@@ -4,7 +4,7 @@
     @include adaptiveValue("font-size", 78, 42);
     line-height: math.div(90, 78);
 }
-.sub-title {
+.desc-like-h2 {
     font-weight: 700;
     font-size: 46px;
     @include adaptiveValue("font-size", 46, 28);
@@ -25,7 +25,7 @@
         line-height: math.div(32, 21);
     }
 }
-.sub-title-like-label {
+.h2-like-label {
     font-size: rem(20);
     line-height: math.div(34, 20);
     display: inline-block;

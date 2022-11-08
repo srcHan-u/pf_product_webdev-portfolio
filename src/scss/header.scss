@@ -1,54 +1,139 @@
 //====================================================================================================
+.header {
+    min-height: rem(108);
+    display: flex;
+    align-items: flex-end;
+    &__container {
+        width: 100%;
+        height: 100%;
+    }
 
+    &__body {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(20);
+    }
+
+    &__logo {
+    }
+
+    &__menu {
+        flex: 0 1 rem(403);
+        @media (max-width: $mobile) {
+            flex: 0 0 rem(40);
+        }
+    }
+}
+
+.menu {
+    &__icon {
+    }
+
+    &__navigation {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(5);
+    }
+
+    &__item {
+    }
+
+    &__link {
+        line-height: 150%;
+        display: inline-block;
+        position: relative;
+        padding: 10px 0;
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: rem(2);
+            background-color: #fff;
+            position: absolute;
+            top: calc(100% - 7px);
+            left: 0;
+            transition: width 0.4s ease 0s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.mobile-menu {
+}
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+    display: none;
+    @media (max-width: $mobile) {
+        display: inline-block;
+        position: relative;
+        width: rem(30);
+        height: rem(18);
+        cursor: pointer;
+        z-index: 5;
+        span,
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: rem(2);
+            background-color: #fff;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - rem(1));
+        }
+        .menu-open & {
+            span {
+                width: 0;
+            }
+            &::before,
+            &::after {
+            }
+            &::before {
+                top: calc(50% - rem(1));
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - rem(1));
+                transform: rotate(45deg);
+            }
+        }
+    }
 }
-*/
+
+// todo fd доработать и перенести в основную сборку
+.icon-burger {
+    span {
+        &:nth-child(1) {
+        }
+        &:nth-child(2) {
+        }
+        &:nth-child(3) {
+        }
+    }
+}
