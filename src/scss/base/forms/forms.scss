@@ -1,28 +1,88 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+    width: 646.65px;
+    height: 339px;
+    display: inline-block;
+
+    &__body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: rem(20);
+    }
+    &__column {
+    }
+    &__line {
+    }
+    &__input {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: math.div(27, 16);
+        color: #ffffff;
+        padding-bottom: rem(14);
+        border-bottom: 1px solid #fff;
+        &::placeholder {
+            font-family: "Montserrat";
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: math.div(27, 16);
+            color: #ffffff;
+        }
+    }
+    &__button {
+        line-height: 150%;
+        align-self: flex-end;
+        position: relative;
+        transform: translateX(-83px);
+    }
+    &__error {
+    }
+    &__message {
+        width: 100%;
+        background-color: transparent;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: math.div(27, 16);
+        color: #ffffff;
+        resize: none;
+        height: rem(102);
+        border-bottom: 1px solid #fff;
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            width: 100%;
+            border-radius: 8px;
+            background-color: rgb(147, 147, 147);
+        }
+        &::placeholder {
+            font-family: "Montserrat";
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: math.div(27, 16);
+            color: #ffffff;
+        }
+    }
 }
 //</FORM>
 
 // <BUTTONS>
 // Снипет (HTML): btn
-// @import "button";
+@import "button";
 
 // <INPUTS>
 // Снипет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Снипет (HTML): chk
