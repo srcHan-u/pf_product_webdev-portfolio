@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page page_home">
-
-                <!-- <img class="" src="@img/home/main-screen-image_1.png" alt="image">
+  @@include('html/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page page_home">
+        <!-- <img class="" src="@img/home/main-screen-image_1.png" alt="image">
                 <img class="" data-src="@img/home/main-screen-image_1.png" alt="image"> -->
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+        <section class="page__reviews reviews">
+          <div class="reviews__container">
+            <div class="reviews__body">
+                <div class="reviews__text-box">
+                    <h2 class="reviews__h2 h2-like-label">Reviews</h2>
+                    <p class="reviews__desc desc-like-h2">What my clients say about me</p>
+                </div>
+                <div class="review-slider swiper">
+                    <div class="review-slider__wrapper swiper-wrapper">
+                        <div class="review-slider__slide swiper-slide">
+                            <div class="card-feedback">
+                                <div class="card-feedback__body">
+                                    <img data-src="@img/home/avatar_1.png" alt="avatar image" class="card-feedback__avatar">
+                                    <h5 class="card-feedback__name">Paul Kellerman</h5>
+                                    <p class="card-feedback__text">Thanks to Michael for doing everything efficiently on time and without broaches. I recommend this specialist for work. Special thanks to Michael for the work that was not included in the original.</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="review-slider__slide swiper-slide">
+                            <div class="card-feedback">
+                                <div class="card-feedback__body">
+                                    <img data-src="@img/home/avatar_2.png" alt="avatar image" class="card-feedback__avatar">
+                                    <h5 class="card-feedback__name">Paul Kellerman</h5>
+                                    <p class="card-feedback__text">The performer who specifically understands the task. Very cool and easy to communicate. I did an excellent job, I will contact you. I advise everyone!</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="review-slider__slide swiper-slide">
+                            <div class="card-feedback">
+                                <div class="card-feedback__body">
+                                    <img data-src="@img/home/avatar_3.png" alt="avatar image" class="card-feedback__avatar">
+                                    <h5 class="card-feedback__name">Paul Kellerman</h5>
+                                    <p class="card-feedback__text">The performer who specifically understands the task. Very cool and easy to communicate. I did an excellent job, I will contact you. I advise everyone!</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="review-slider__slide swiper-slide">
+                            <div class="card-feedback">
+                                <div class="card-feedback__body">
+                                    <img data-src="@img/home/avatar_2.png" alt="avatar image" class="card-feedback__avatar">
+                                    <h5 class="card-feedback__name">Paul Kellerman</h5>
+                                    <p class="card-feedback__text">The performer who specifically understands the task. Very cool and easy to communicate. I did an excellent job, I will contact you. I advise everyone!</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="review-slider__pagination swiper-pagination"></div>
+                    <div class="review-slider__navigation">
+                        <button type="button" class="review-slider__btn-prev swiper-button-prev _icon-arrow_long"></button>
+                        <button type="button" class="review-slider__btn-next  swiper-button-next _icon-arrow_long"></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
 </html>

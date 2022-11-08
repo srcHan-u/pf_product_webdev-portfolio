@@ -1,3 +1,77 @@
 //====================================================================================================
 
+.page {
+    &__reviews {
+        min-height: rem(545 + 252);
+    }
+}
+.reviews {
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__text-box {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 90, 45);
+        }
+    }
+
+    &__h2 {
+        &:not(:last-child) {
+            margin-bottom: em(20, 20);
+        }
+    }
+
+    &__desc {
+    }
+}
+
+.review-slider {
+    position: relative;
+    max-width: rem(863);
+    &__wrapper {
+    }
+
+    &__slide {
+        // justify-content: center;
+        // display: flex;
+    }
+
+    &__pagination {
+    }
+
+    &__navigation {
+        width: rem(80);
+        display: inline-flex;
+        flex-direction: column;
+        > button {
+            width: fit-content;
+            font-size: rem(23);
+        }
+    }
+
+    &__btn-prev {
+        align-self: flex-end;
+        transform: scale(-1);
+    }
+
+    &__btn-next {
+        align-self: flex-start;
+    }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+
 //====================================================================================================
